@@ -10,12 +10,12 @@ logstash-install:
     - user: root
     - group: root
   cmd.run:
-    - name: rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch && yum install -y logstash
+    - name: rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch && yum install -y logstash
     - require:
       - file: /etc/yum.repos.d/logstash.repo
-    - unless: test -d /usr/share/logstash
+    - unless: test -d /usr/local/logstash
 logstash-init:
   file.append:
     - name: /etc/profile
     - text:
-      - export PATH="/usr/share/logstash/bin/:$PATH"
+      - export PATH="/usr/local/logstash/bin/:$PATH"

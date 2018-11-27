@@ -1,4 +1,4 @@
-system-init:
+rely-pkg:
   pkg.installed:
     - names:
       - gcc

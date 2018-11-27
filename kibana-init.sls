@@ -7,4 +7,4 @@
 /etc/profile:
     file.append:
         - text:
-          - export "PATH=/usr/share/kibana/bin/:$PATH"
+          - export "PATH=/usr/local/kibana/bin/:$PATH"

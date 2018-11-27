@@ -2,7 +2,7 @@ base:
   "*":
     - system-init
     - java-install
-    - es
+    - elasticsearch
     - httpd
     - logstash
   "12-elk-slave":

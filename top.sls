@@ -1,6 +1,6 @@
 base:
   "*":
-    - system-init
+    - rely-pkg
     - java-install
     - elasticsearch
     - httpd

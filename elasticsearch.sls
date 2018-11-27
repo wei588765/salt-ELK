@@ -6,7 +6,7 @@ es-install:
     - user: root
     - group: root
   cmd.run:
-    - name: rpm --import https://packages.elastic.co/GPG-KEY-elasticsearch && yum install -y elasticsearch && /usr/share/elasticsearch/bin/plugin install mobz/elasticsearch-head && /usr/share/elasticsearch/bin/plugin install lmenezes/elasticsearch-kopf
+    - name: rpm --import https://artifacts.elastic.co/GPG-KEY-elasticsearch && yum install -y elasticsearch
     - require:
       - file: /etc/yum.repos.d/elasticsearch.repo 
     - unless: test -d /usr/share/elasticsearch
